@@ -36,21 +36,25 @@ public class ArrayListExample3 {
 			// Task: Insert an element at first position
 			colors.add(0, "Updated: VIBGYOR");
 
+			System.out.println("--------------------Displaying output using for loop--------------------");
 			// UseCase 1: Iterate using for loop
 			for (int i = 0; i < sizeOfArrayList; i++) {
 				System.out.println(colors.get(i));
 			}
 
+			System.out.println("--------------------Displaying output using advanced for loop--------------------");
 			// UseCase 2: Iterate using advanced for loop
 			for (String i : colors) {
 				System.out.println(i);
 			}
 
+			System.out.println("--------------------Displaying output using forEach loop--------------------");
 			// UseCase 3: Iterate using forEach loop
 			colors.forEach(color -> {
 				System.out.println(color);
 			});
 
+			System.out.println("--------------------Displaying output using Iterator--------------------");
 			// UseCase 4: Iterate using Iterator
 			Iterator<String> iterator = colors.iterator();
 			while (iterator.hasNext()) {

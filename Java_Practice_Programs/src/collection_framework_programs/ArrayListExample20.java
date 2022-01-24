@@ -1,5 +1,5 @@
 /**
- * 
+ * Write a Java program to increase the size of an array list.
  */
 package collection_framework_programs;
 
@@ -11,14 +11,13 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample2 {
+public class ArrayListExample20 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Creating Scanner object to read values from user
 		try (Scanner scanner = new Scanner(System.in);) {
 
 			// Create an ArrayList
@@ -31,6 +30,15 @@ public class ArrayListExample2 {
 			// Read colors from user
 			for (int i = 0; i < sizeOfArrayList; i++) {
 				colors.add(scanner.nextLine());
+			}
+
+			// Task: Increase capacity of ArrayList
+			try {
+				colors.ensureCapacity(5); // Increased by 5 more elements
+			} catch (IndexOutOfBoundsException ioe) {
+				ioe.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 			System.out.println("--------------------Displaying output using for loop--------------------");
@@ -58,7 +66,6 @@ public class ArrayListExample2 {
 				System.out.println(iterator.next());
 			}
 		}
-
 	}
 
 }

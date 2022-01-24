@@ -1,9 +1,10 @@
 /**
- * 
+ * Write a Java program to copy one array list into another.
  */
 package collection_framework_programs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -11,14 +12,13 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample2 {
+public class ArrayListExample9 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Creating Scanner object to read values from user
 		try (Scanner scanner = new Scanner(System.in);) {
 
 			// Create an ArrayList
@@ -31,6 +31,17 @@ public class ArrayListExample2 {
 			// Read colors from user
 			for (int i = 0; i < sizeOfArrayList; i++) {
 				colors.add(scanner.nextLine());
+			}
+
+			// Task: Copy one ArrayList to another
+			try {
+				ArrayList<String> newColorsList = new ArrayList<>();
+				Collections.copy(colors, newColorsList);
+				System.out.println(newColorsList);
+			} catch (IndexOutOfBoundsException ioe) {
+				ioe.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 			System.out.println("--------------------Displaying output using for loop--------------------");
@@ -58,7 +69,6 @@ public class ArrayListExample2 {
 				System.out.println(iterator.next());
 			}
 		}
-
 	}
 
 }

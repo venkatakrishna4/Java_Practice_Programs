@@ -1,5 +1,5 @@
 /**
- * 
+ * Write a Java program to join two array lists.
  */
 package collection_framework_programs;
 
@@ -11,14 +11,13 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample2 {
+public class ArrayListExample15 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Creating Scanner object to read values from user
 		try (Scanner scanner = new Scanner(System.in);) {
 
 			// Create an ArrayList
@@ -31,6 +30,28 @@ public class ArrayListExample2 {
 			// Read colors from user
 			for (int i = 0; i < sizeOfArrayList; i++) {
 				colors.add(scanner.nextLine());
+			}
+
+			// Task: Join two ArrayLists
+			try {
+				ArrayList<String> newList1 = new ArrayList<>();
+				newList1.add("1");
+				newList1.add("2");
+				ArrayList<String> newList2 = new ArrayList<>();
+				newList2.add("3");
+				newList2.add("4");
+
+				colors.removeAll(colors);
+				colors.addAll(newList1);
+				colors.addAll(newList2);
+
+				System.out.println(newList1);
+				System.out.println(newList2);
+				System.out.println(colors);
+			} catch (IndexOutOfBoundsException ioe) {
+				ioe.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 			System.out.println("--------------------Displaying output using for loop--------------------");
@@ -58,7 +79,6 @@ public class ArrayListExample2 {
 				System.out.println(iterator.next());
 			}
 		}
-
 	}
 
 }
