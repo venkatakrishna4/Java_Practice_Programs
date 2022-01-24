@@ -1,7 +1,7 @@
 /**
- * Write a Java program to reverse elements in a array list.
+ * Write a Java program to compare two array lists
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample11 {
+public class ArrayListExample13 {
 
 	/**
 	 * @param args
@@ -33,11 +33,11 @@ public class ArrayListExample11 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Reverse the ArrayList
+			// Task: Compare two ArrayLists
 			try {
-				System.out.println(colors);
-				Collections.reverse(colors);
-				System.out.println(colors);
+				ArrayList<String> newList = new ArrayList<>();
+				Collections.copy(colors.subList(0, 3), newList);
+				System.out.println(colors.equals(newList));
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

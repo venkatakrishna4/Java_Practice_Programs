@@ -1,7 +1,7 @@
 /**
- * Write a Java program to empty an array list.
+ * Write a Java program to trim the capacity of an array list the current list size.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample17 {
+public class ArrayListExample19 {
 
 	/**
 	 * @param args
@@ -32,11 +32,9 @@ public class ArrayListExample17 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Empty an ArrayList
+			// Task: Trim ArrayList size to current capacity
 			try {
-				System.out.println(colors);
-				colors.removeAll(colors);
-				System.out.println(colors);
+				colors.trimToSize();
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

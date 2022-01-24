@@ -1,10 +1,9 @@
 /**
- * Write a Java program to copy one array list into another.
+ * Write a Java program to retrieve an element (at a specified index) from a given array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample9 {
+public class ArrayListExample4 {
 
 	/**
 	 * @param args
@@ -33,15 +32,11 @@ public class ArrayListExample9 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Copy one ArrayList to another
+			// Task: Retrieve an element at specific index
 			try {
-				ArrayList<String> newColorsList = new ArrayList<>();
-				Collections.copy(colors, newColorsList);
-				System.out.println(newColorsList);
+				colors.get(2);
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
-			} catch (Exception e) {
-				e.printStackTrace();
 			}
 
 			System.out.println("--------------------Displaying output using for loop--------------------");

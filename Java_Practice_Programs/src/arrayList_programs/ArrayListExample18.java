@@ -1,10 +1,9 @@
 /**
- * Write a Java program to shuffle elements in a array list.
+ * Write a Java program to test an array list is empty or not.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample10 {
+public class ArrayListExample18 {
 
 	/**
 	 * @param args
@@ -33,11 +32,11 @@ public class ArrayListExample10 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Shuffle elements in ArrayList
+			// Task: Check ArrayList is empty or not
 			try {
-				System.out.println(colors);
-				Collections.shuffle(colors);
-				System.out.println(colors);
+				System.out.println(colors.isEmpty());
+				colors.removeAll(colors);
+				System.out.println(colors.isEmpty());
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

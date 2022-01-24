@@ -1,7 +1,7 @@
 /**
- * Write a Java program to increase the size of an array list.
+ *  Write a Java program to search an element in a array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample20 {
+public class ArrayListExample7 {
 
 	/**
 	 * @param args
@@ -32,9 +32,11 @@ public class ArrayListExample20 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Increase capacity of ArrayList
+			// Task: Search for an element in ArrayList
 			try {
-				colors.ensureCapacity(5); // Increased by 5 more elements
+				System.out.println("Enter the element needs be searched: ");
+				String searchElement = scanner.nextLine();
+				System.out.println("Search Result is: " + colors.contains(searchElement));
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

@@ -1,7 +1,7 @@
 /**
  * Write a Java program to join two array lists.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Iterator;

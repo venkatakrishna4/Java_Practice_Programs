@@ -1,10 +1,9 @@
 /**
- * Write a Java program of swap two elements in an array list.
+ * Write a Java program to clone an array list to another array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample14 {
+public class ArrayListExample16 {
 
 	/**
 	 * @param args
@@ -33,11 +32,12 @@ public class ArrayListExample14 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Swap two elements in the ArrayList
+			// Task: Clone one ArrayList into another
 			try {
+				@SuppressWarnings("unchecked")
+				ArrayList<String> newList = (ArrayList<String>) colors.clone();
 				System.out.println(colors);
-				Collections.swap(colors, 0, 1);
-				System.out.println(colors);
+				System.out.println(newList);
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

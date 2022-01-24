@@ -1,7 +1,7 @@
 /**
- * Write a Java program to clone an array list to another array list.
+ * Write a Java program to extract a portion of a array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample16 {
+public class ArrayListExample12 {
 
 	/**
 	 * @param args
@@ -32,12 +32,10 @@ public class ArrayListExample16 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Clone one ArrayList into another
+			// Task: Print some portion of the ArrayList
 			try {
-				@SuppressWarnings("unchecked")
-				ArrayList<String> newList = (ArrayList<String>) colors.clone();
 				System.out.println(colors);
-				System.out.println(newList);
+				System.out.println(colors.subList(0, 3));
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

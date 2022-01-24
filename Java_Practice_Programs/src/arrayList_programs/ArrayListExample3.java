@@ -1,7 +1,7 @@
 /**
- * Write a Java program to extract a portion of a array list.
+ * Write a Java program to insert an element into the array list at the first position.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,13 +11,14 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample12 {
+public class ArrayListExample3 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// Creating Scanner object to read values from user
 		try (Scanner scanner = new Scanner(System.in);) {
 
 			// Create an ArrayList
@@ -32,15 +33,8 @@ public class ArrayListExample12 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Print some portion of the ArrayList
-			try {
-				System.out.println(colors);
-				System.out.println(colors.subList(0, 3));
-			} catch (IndexOutOfBoundsException ioe) {
-				ioe.printStackTrace();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			// Task: Insert an element at first position
+			colors.add(0, "Updated: VIBGYOR");
 
 			System.out.println("--------------------Displaying output using for loop--------------------");
 			// UseCase 1: Iterate using for loop

@@ -1,9 +1,10 @@
 /**
- *  Write a Java program to search an element in a array list.
+ * Write a Java program to sort a given array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample7 {
+public class ArrayListExample8 {
 
 	/**
 	 * @param args
@@ -32,11 +33,10 @@ public class ArrayListExample7 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Search for an element in ArrayList
+			// Task: Sort the list
 			try {
-				System.out.println("Enter the element needs be searched: ");
-				String searchElement = scanner.nextLine();
-				System.out.println("Search Result is: " + colors.contains(searchElement));
+				Collections.sort(colors); // ascending order
+				Collections.reverse(colors); // descending order
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

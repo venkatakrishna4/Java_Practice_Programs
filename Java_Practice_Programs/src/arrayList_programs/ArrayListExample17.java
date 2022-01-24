@@ -1,7 +1,7 @@
 /**
- * Write a Java program to update specific array element by given element.
+ * Write a Java program to empty an array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample5 {
+public class ArrayListExample17 {
 
 	/**
 	 * @param args
@@ -32,13 +32,11 @@ public class ArrayListExample5 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Update specific array element by given element
+			// Task: Empty an ArrayList
 			try {
-				System.out.println("What is the old value: ");
-				String oldValue = scanner.nextLine();
-				System.out.println("What is the new value: ");
-				String newValue = scanner.nextLine();
-				colors.set(colors.indexOf(oldValue), newValue);
+				System.out.println(colors);
+				colors.removeAll(colors);
+				System.out.println(colors);
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

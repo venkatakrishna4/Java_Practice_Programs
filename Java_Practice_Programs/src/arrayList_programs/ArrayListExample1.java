@@ -1,7 +1,7 @@
 /**
  * Write a Java program to create a new array list, add some colors (string) and print out the collection.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Scanner;

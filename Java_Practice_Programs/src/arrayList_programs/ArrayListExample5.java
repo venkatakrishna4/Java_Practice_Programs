@@ -1,7 +1,7 @@
 /**
- * 
+ * Write a Java program to update specific array element by given element.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,14 +11,13 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample2 {
+public class ArrayListExample5 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Creating Scanner object to read values from user
 		try (Scanner scanner = new Scanner(System.in);) {
 
 			// Create an ArrayList
@@ -31,6 +30,19 @@ public class ArrayListExample2 {
 			// Read colors from user
 			for (int i = 0; i < sizeOfArrayList; i++) {
 				colors.add(scanner.nextLine());
+			}
+
+			// Task: Update specific array element by given element
+			try {
+				System.out.println("What is the old value: ");
+				String oldValue = scanner.nextLine();
+				System.out.println("What is the new value: ");
+				String newValue = scanner.nextLine();
+				colors.set(colors.indexOf(oldValue), newValue);
+			} catch (IndexOutOfBoundsException ioe) {
+				ioe.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 			System.out.println("--------------------Displaying output using for loop--------------------");
@@ -58,7 +70,6 @@ public class ArrayListExample2 {
 				System.out.println(iterator.next());
 			}
 		}
-
 	}
 
 }

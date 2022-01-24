@@ -1,9 +1,10 @@
 /**
- * Write a Java program to trim the capacity of an array list the current list size.
+ * Write a Java program of swap two elements in an array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample19 {
+public class ArrayListExample14 {
 
 	/**
 	 * @param args
@@ -32,9 +33,11 @@ public class ArrayListExample19 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Trim ArrayList size to current capacity
+			// Task: Swap two elements in the ArrayList
 			try {
-				colors.trimToSize();
+				System.out.println(colors);
+				Collections.swap(colors, 0, 1);
+				System.out.println(colors);
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

@@ -1,7 +1,7 @@
 /**
- * Write a Java program to insert an element into the array list at the first position.
+ * Write a Java program to remove the third element from a array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,14 +11,13 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample3 {
+public class ArrayListExample6 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Creating Scanner object to read values from user
 		try (Scanner scanner = new Scanner(System.in);) {
 
 			// Create an ArrayList
@@ -33,8 +32,14 @@ public class ArrayListExample3 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Insert an element at first position
-			colors.add(0, "Updated: VIBGYOR");
+			// Task: Remove the third element
+			try {
+				colors.remove(2);
+			} catch (IndexOutOfBoundsException ioe) {
+				ioe.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 
 			System.out.println("--------------------Displaying output using for loop--------------------");
 			// UseCase 1: Iterate using for loop

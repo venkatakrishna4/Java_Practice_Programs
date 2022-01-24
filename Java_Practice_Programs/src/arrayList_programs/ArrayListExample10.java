@@ -1,9 +1,10 @@
 /**
- * Write a Java program to retrieve an element (at a specified index) from a given array list.
+ * Write a Java program to shuffle elements in a array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample4 {
+public class ArrayListExample10 {
 
 	/**
 	 * @param args
@@ -32,11 +33,15 @@ public class ArrayListExample4 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Retrieve an element at specific index
+			// Task: Shuffle elements in ArrayList
 			try {
-				colors.get(2);
+				System.out.println(colors);
+				Collections.shuffle(colors);
+				System.out.println(colors);
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 			System.out.println("--------------------Displaying output using for loop--------------------");

@@ -1,9 +1,10 @@
 /**
- * Write a Java program to remove the third element from a array list.
+ * Write a Java program to reverse elements in a array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample6 {
+public class ArrayListExample11 {
 
 	/**
 	 * @param args
@@ -32,9 +33,11 @@ public class ArrayListExample6 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Remove the third element
+			// Task: Reverse the ArrayList
 			try {
-				colors.remove(2);
+				System.out.println(colors);
+				Collections.reverse(colors);
+				System.out.println(colors);
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

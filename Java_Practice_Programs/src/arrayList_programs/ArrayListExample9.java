@@ -1,7 +1,7 @@
 /**
- * Write a Java program to sort a given array list.
+ * Write a Java program to copy one array list into another.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample8 {
+public class ArrayListExample9 {
 
 	/**
 	 * @param args
@@ -33,10 +33,11 @@ public class ArrayListExample8 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Sort the list
+			// Task: Copy one ArrayList to another
 			try {
-				Collections.sort(colors); // ascending order
-				Collections.reverse(colors); // descending order
+				ArrayList<String> newColorsList = new ArrayList<>();
+				Collections.copy(colors, newColorsList);
+				System.out.println(newColorsList);
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

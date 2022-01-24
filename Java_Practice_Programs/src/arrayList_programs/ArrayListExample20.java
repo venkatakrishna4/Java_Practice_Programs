@@ -1,10 +1,9 @@
 /**
- * Write a Java program to compare two array lists
+ * Write a Java program to increase the size of an array list.
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample13 {
+public class ArrayListExample20 {
 
 	/**
 	 * @param args
@@ -33,11 +32,9 @@ public class ArrayListExample13 {
 				colors.add(scanner.nextLine());
 			}
 
-			// Task: Compare two ArrayLists
+			// Task: Increase capacity of ArrayList
 			try {
-				ArrayList<String> newList = new ArrayList<>();
-				Collections.copy(colors.subList(0, 3), newList);
-				System.out.println(colors.equals(newList));
+				colors.ensureCapacity(5); // Increased by 5 more elements
 			} catch (IndexOutOfBoundsException ioe) {
 				ioe.printStackTrace();
 			} catch (Exception e) {

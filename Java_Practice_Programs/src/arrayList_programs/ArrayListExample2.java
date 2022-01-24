@@ -1,7 +1,7 @@
 /**
- * Write a Java program to test an array list is empty or not.
+ * 
  */
-package collection_framework_programs;
+package arrayList_programs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,13 +11,14 @@ import java.util.Scanner;
  * @author krish
  *
  */
-public class ArrayListExample18 {
+public class ArrayListExample2 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// Creating Scanner object to read values from user
 		try (Scanner scanner = new Scanner(System.in);) {
 
 			// Create an ArrayList
@@ -30,17 +31,6 @@ public class ArrayListExample18 {
 			// Read colors from user
 			for (int i = 0; i < sizeOfArrayList; i++) {
 				colors.add(scanner.nextLine());
-			}
-
-			// Task: Check ArrayList is empty or not
-			try {
-				System.out.println(colors.isEmpty());
-				colors.removeAll(colors);
-				System.out.println(colors.isEmpty());
-			} catch (IndexOutOfBoundsException ioe) {
-				ioe.printStackTrace();
-			} catch (Exception e) {
-				e.printStackTrace();
 			}
 
 			System.out.println("--------------------Displaying output using for loop--------------------");
@@ -68,6 +58,7 @@ public class ArrayListExample18 {
 				System.out.println(iterator.next());
 			}
 		}
+
 	}
 
 }
